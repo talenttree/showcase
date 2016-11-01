@@ -2294,11 +2294,18 @@
 			position: relative;
 			width: calc(100% + 6em);
 		}
+		.about .box .image.featured img {
+			border-radius: 0;
+			display: block;
+			width: 100%;
+			max-height: 22em;
+		}
 
 			.box .image.featured img {
 				border-radius: 0;
 				display: block;
 				width: 100%;
+				max-height: 15em;
 			}
 
 			.box .image.featured:first-child {
