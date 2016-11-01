@@ -18,6 +18,28 @@
 		vertical-align: baseline;
 	}
 
+	p, ol li, ul li, span {
+		text-align: justify;
+	}
+
+	ul li, ol li {
+		padding-bottom: .5em;
+	}
+
+	.contact .box hr {
+		margin: 1em 0;
+		padding: 0;
+	}
+
+	.contact .box p {
+		margin: 0;
+		padding: 0;
+	}
+
+	p.center {
+		text-align: center;
+	}
+
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
