@@ -80,6 +80,8 @@
 
 /* Containers */
 
+
+
 	.container {
 		margin-left: auto;
 		margin-right: auto;
@@ -2852,10 +2854,14 @@
 
 			#header h1 a {
 				color: #fff;
+                font-size: 1.2em;
 				font-weight: 400;
 				border: 0;
 			}
 
+			#header h1 a img {
+                height: 1.3em;
+			}
 		#header nav {
 			height: inherit;
 			line-height: inherit;
