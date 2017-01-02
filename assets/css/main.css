@@ -3803,7 +3803,7 @@
   cursor: pointer;
   height: 2em;
   font-family: inherit;
-  font-size: 14.5px;
+  font-size: 100%;
   font-weight: 100;
 }
 
@@ -3824,6 +3824,7 @@
 .dropdown-content a {
   display: block;
   position: relative;
+	font-size: 15px;
 }
 
 .dropdown-content a:last-child {
