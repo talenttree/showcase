@@ -17,23 +17,23 @@
 		<div id="page-wrapper" class="about">
 
 			<!-- Header -->
-				<header id="header">
-					<h1><a href="index.html"><img src="icon.svg" alt="logo"> Talent Tree</h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li>
-								<a href="#" class="icon fa-angle-down">Services</a>
-								<ul>
-									<li><a href="employer.html">Employers</a></li>
-									<li><a href="job-seekers.html">Job Seekers</a></li>
-								</ul>
-							</li>
-							<li><a href="contact.html" class="button">Contact Us</a></li>
-						</ul>
-					</nav>
-				</header>
+      <header id="header">
+        <h1><a href="index.html"><img src="icon.svg" alt="logo"> Talent Tree</h1>
+          <nav id="nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li class="dropdown icon fa-angle-down">
+                <button class="dropbtn">Services</button>
+                <div class="dropdown-content">
+                  <a href="employer.html">Employers</a>
+                  <a href="job-seekers.html">Job Seekers</a>
+                </div>
+              </li>
+              <li><a href="contact.html" class="button">Contact Us</a></li>
+            </ul>
+          </nav>
+      </header>
 
 			<!-- Main -->
 				<section id="main" class="container">
@@ -49,7 +49,20 @@
 						<strong>To make it easy <a href="contact.html" class="">contact us</a> now or request call back via SMS to <a href="tel:0490508718">+61 490 508 718</a><br></strong></p>
 					</div>
 				</section>
-
+        <section id="jobs" class="row">
+          <h2>Our Job Opennings</h2>
+          <div id="ja-jobs-widget"></div>
+          <script>
+            var _jaJobsSettings = {
+              key: "AU2_hcyzsmje4fgutajs56ahrranje",
+              applicationFormSettings: {
+                useExternalApplicationForm: true,
+                showExternalApplicationFormInNewWindow: false
+              }
+            };
+          </script>
+          <script src="https://jobadder.com/widgets/v1/jobs.min.js"></script>
+        </section>
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">

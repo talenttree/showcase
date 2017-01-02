@@ -25,13 +25,6 @@
                     <a href="job-seekers.html">Job Seekers</a>
                   </div>
                 </li>
-								<!-- <li>
-									<a href="#" class="icon fa-angle-down">Services</a>
-									<ul>
-										<li><a href="employer.html">Employers</a></li>
-										<li><a href="job-seekers.html">Job Seekers</a></li>
-									</ul>
-								</li> -->
 								<li><a href="contact.html" class="button">Contact Us</a></li>
 							</ul>
 						</nav>
@@ -45,6 +38,12 @@
 						<li><a href="employer.html" class="button special">For Employers</a></li>
 						<li><a href="job-seekers.html" class="button">For Job Seekers</a></li>
 					</ul>
+					<a class="job-link" href="#jobs">
+            <div class="arrow bounce"></div>
+            <p>
+              Check Our Jobs
+            </p>
+          </a>
 				</section>
 
 			<!-- Main -->
@@ -86,7 +85,20 @@
 					</div>
 
 				</section>
-
+        <section id="jobs" class="row">
+          <h2>Our Job Opennings</h2>
+          <div id="ja-jobs-widget"></div>
+          <script>
+            var _jaJobsSettings = {
+              key: "AU2_hcyzsmje4fgutajs56ahrranje",
+              applicationFormSettings: {
+                useExternalApplicationForm: true,
+                showExternalApplicationFormInNewWindow: false
+              }
+            };
+          </script>
+          <script src="https://jobadder.com/widgets/v1/jobs.min.js"></script>
+        </section>
 			<!-- CTA -->
 				<section id="cta">
 					<h2>Subscribe</h2>
