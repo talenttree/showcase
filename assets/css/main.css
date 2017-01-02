@@ -4014,3 +4014,7 @@
     display: inline-block;
   }
 }
+
+#navButton, #navPanel{
+  display: none;
+}
