@@ -3823,9 +3823,11 @@
 }
 
 .dropdown-content a {
-  display: block;
-  position: relative;
+	display: block !important;
+	position: relative;
 	font-size: 15px;
+	height: 2.5em !important;
+	padding: .25em 1em 0 !important;
 }
 
 .dropdown-content a:last-child {
