@@ -1,11 +1,6 @@
 @import url("font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
-
-/*
-	Alpha by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+@import url("custom-style.css");
 
 /* Reset */
 
@@ -3928,93 +3923,7 @@
   -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
 }
-.job-link p {
-  position: relative;
-  top: 2.8em;
-  color: #e5e5e5;
-  text-align: center;
-}
-.powered-by-jobadder {
-  display: none;
-}
-#jobs {
-  padding: 1em;
-  background: #444;
-}
-#jobs > h2 {
-  color: white;
-}
 .contact #header,
 .about #header{
   background: #444;
-}
-#jobs > h2 {
-  width: 100%;
-  text-align: center;
-}
-#jobs #ja-jobs-widget{
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 991px;
-}
-#jobs .ja-job-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-#jobs .job,
-#jobs .ja-job-details {
-  flex: 1;
-  margin: .5em;
-  border: 1px solid #e5e5e5;
-  border-radius: 6px;
-  padding: 1.5em;
-  background: white;
-  min-width: 300px;
-}
-#jobs .ja-pager-container {
-  text-align: center;
-}
-#jobs .ja-pager-container .ja-pager a,
-#jobs .ja-pager-container .ja-pager span{
-  margin: 0 .5em;
-}
-#jobs .ja-pager-container {
-  color: white
-}
-#jobs .ja-button {
-  display: block;
-  margin: 1em auto;
-}
-#jobs .job .title {
-  font-size: 1.5em;
-}
-#jobs .date-posted {
-  display: none;
-}
-#jobs .job ul,
-#jobs .job p {
-  margin-bottom: 1.3em;
-}
-#jobs .ja-job-details ul li,
-#jobs .job ul li {
-  margin-left: 1em;
-}
-#header nav > ul > li {
-    padding-left: 1em;
-}
-@media screen and (max-width: 736px) {
-  #jobs .ja-job-list {
-    flex-direction: column;
-  }
-  #header nav > ul > li {
-    display: none;
-  }
-  #header nav > ul > li:last-child {
-    display: inline-block;
-  }
-}
-
-#navButton, #navPanel{
-  display: none;
 }

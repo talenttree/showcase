@@ -7,12 +7,21 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+     $(function(){
+       $("#includedContent").load("top-header.html");
+       $("#jobTabs").load("job.html");
+     });
+     
+     </script>
 	</head>
 	<body class="landing">
-		<div id="page-wrapper">
 
+		<div id="page-wrapper">
 			<!-- Header -->
 				<header id="header" class="alt">
+          <div id="includedContent"></div>
 					<h1><a href="index.html"><img src="icon.svg" alt="logo"> Talent Tree</h1>
 						<nav id="nav">
 							<ul>
@@ -87,17 +96,7 @@
 				</section>
         <section id="jobs" class="row">
           <h2>Our Job Opennings</h2>
-          <div id="ja-jobs-widget"></div>
-          <script>
-            var _jaJobsSettings = {
-              key: "AU2_hcyzsmje4fgutajs56ahrranje",
-              applicationFormSettings: {
-                useExternalApplicationForm: true,
-                showExternalApplicationFormInNewWindow: false
-              }
-            };
-          </script>
-          <script src="https://jobadder.com/widgets/v1/jobs.min.js"></script>
+          <div id="jobTabs"></div>
         </section>
 			<!-- CTA -->
 				<section id="cta">
@@ -132,7 +131,6 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/jquery.scrollgress.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>

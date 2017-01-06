@@ -1,0 +1,283 @@
+/*
+ Top Header
+ */
+.top-header {
+  position: relative;
+  top: -3.2em;
+  background: #2d2d2d;
+  color: #fff;
+  max-height: 100px;
+}
+.top-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+.top-header ul li {
+  display: inline-block;
+  margin: 0 1em;
+  padding: 0;
+  font-size: 1em;
+  font-weight: bold;
+}
+.top-header ul li a{
+  border: 0;
+  text-decoration: none;
+  color: #fff;
+}
+.top-header ul li a:hover,
+.top-header ul li a:focus{
+  border: 0;
+  text-decoration: underline;
+}
+.top-header  ul li .fa{
+  padding-right: .5em;
+}
+#header {
+  top: 3.2em !important;
+}
+
+@media screen and (max-width: 736px) {
+  .top-header ul {
+    text-align: center;
+  }
+  .top-header ul li {
+    font-size: .85em;
+    font-weight: bold;
+  }
+}
+
+/*
+Job Styles
+ */
+.job-link p {
+  position: relative;
+  top: 2.8em;
+  color: #e5e5e5;
+  text-align: center;
+}
+.powered-by-jobadder {
+  display: none;
+}
+#jobs {
+  padding: 1em 4em 2em;
+  background: #ddd;
+}
+#jobs > h2 {
+  color: #1d232c;
+  width: 100%;
+  text-align: center;
+}
+#jobs #ja-jobs-widget{
+  /*position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 991px;*/
+}
+#jobs .ja-job-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+#jobs .ja-job-list .meta{
+  display: none;
+}
+#jobs .job {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#jobs .job,
+#jobs .ja-job-details {
+  flex: 1;
+  margin: .5em;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 1.5em;
+  background: white;
+  min-width: 280px;
+  max-width: 320px;
+}
+#jobs .ja-pager-container {
+  text-align: center;
+}
+#jobs .ja-pager-container .ja-pager a,
+#jobs .ja-pager-container .ja-pager span{
+  margin: 0 .5em;
+}
+#jobs .ja-pager-container {
+  color: white
+}
+#jobs .ja-button {
+  display: block;
+  margin: 1em auto;
+}
+#jobs .job .title {
+  font-size: 1.25em;
+}
+#jobs .date-posted {
+  display: none;
+}
+#jobs .job ul,
+#jobs .job p {
+  font-size: .85em;
+  margin-bottom: 1.3em;
+}
+#jobs .ja-job-details ul li,
+#jobs .job ul li {
+  margin-left: 1em;
+}
+#header nav > ul > li {
+    padding-left: 1em;
+}
+@media screen and (max-width: 736px) {
+  #jobs .ja-job-list {
+    flex-direction: column;
+  }
+  #header nav > ul > li {
+    display: none;
+  }
+  #header nav > ul > li:last-child {
+    display: inline-block;
+  }
+}
+
+#navButton, #navPanel{
+  display: none;
+}
+
+#jobTabs section {
+  display: none;
+  padding: 2.5em 2em 2em;
+  background: #1d232c;
+  border-top: 1px solid #ddd;
+}
+
+#jobTabs input {
+  display: none;
+}
+
+#jobTabs label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+  background: #2a323f;
+}
+
+#jobTabs label:before {
+  display: none;
+}
+
+#jobTabs label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+#jobTabs input:checked + label {
+  color: #fff;
+  /*border: 1px solid #ddd;*/
+  border-top: 2px solid orange;
+  /*border-bottom: 1px solid #fff;*/
+  background: #1d232c;
+}
+
+#jobTabs #tab1:checked ~ #content1,
+#jobTabs #tab2:checked ~ #content2,
+#jobTabs #tab3:checked ~ #content3{
+  display: block;
+}
+
+@media screen and (max-width: 650px) {
+  #jobs {
+    padding: 1em 1em 2em;
+  }
+  #jobTabs label {
+    font-size: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #jobs {
+    padding: 1em .5em 2em;
+  }
+  #jobTabs label {
+    padding: 15px;
+  }
+}
+
+
+.kart {
+  margin: auto;
+  width: 330px;
+  min-height: 430px;
+  max-height: 500px;
+  background: #f1e9db;
+  border-radius: 10px;
+  box-shadow: 0 0 85px #222;
+  overflow: hidden;
+}
+.kart .content {
+  position: relative;
+  top: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px 30px;
+  margin: 0;
+}
+.kart .content h3 {
+  font-weight: 300;
+  margin: 0;
+  font-size: 32px;
+  color: #725e5b;
+}
+.kart .content p {
+  margin: 0 .5em 0;
+  padding: 0;
+}
+.kart .content ul li {
+  font-size: .85em;
+  line-height: 1.2em;
+}
+.kart .avatar {
+  position: relative;
+  top: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 10px solid #725e5b;
+  /*top: 274px;
+  left: 25px;*/
+  box-shadow: 0 1px 2px #000;
+}
+.kart .avatar.man {
+  background: url("images/man.png") no-repeat;
+  background-size: 110% 110%;
+  background-position: center center;
+}
+.kart .avatar.women {
+  background: url("images/women.png") no-repeat;
+  background-size: 110% 110%;
+  background-position: center center;
+}
+.kart .avatar.man1 {
+  background: url("images/man1.png") no-repeat;
+  background-size: 110% 110%;
+  background-position: center center;
+}
+.kart .avatar.women1 {
+  background: url("images/women1.png") no-repeat;
+  background-size: 110% 110%;
+  background-position: center center;
+}
+.kart .location {
+  position: relative;
+  top: 1em;
+  color: #725e5b;
+  font-weight: 600;
+}
