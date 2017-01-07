@@ -1,10 +1,20 @@
 <script>
   $(document).ready(function ($) {
 
-    $('#checkbox').change(function(){
-      setInterval(function () {
-          moveRight();
-      }, 3000);
+    var refreshIntervalId = setInterval(function () {
+        moveRight();
+    }, 5000);
+
+    $('.slider_option #scroll').change(function(){
+      var scrollStatus = document.getElementById("scroll").checked;
+      if (scrollStatus){
+        clearInterval(refreshIntervalId);
+      } else {
+        refreshIntervalId = setInterval(function () {
+            moveRight();
+        }, 5000)
+      }
+
     });
 
     var slideCount = $('#slider ul li').length;
@@ -21,7 +31,7 @@
       function moveLeft() {
           $('#slider ul').animate({
               left: + slideWidth
-          }, 200, function () {
+          }, 700, function () {
               $('#slider ul li:last-child').prependTo('#slider ul');
               $('#slider ul').css('left', '');
           });
@@ -30,19 +40,17 @@
       function moveRight() {
           $('#slider ul').animate({
               left: - slideWidth
-          }, 200, function () {
+          }, 700, function () {
               $('#slider ul li:first-child').appendTo('#slider ul');
               $('#slider ul').css('left', '');
           });
       };
 
       $('a.control_prev').click(function () {
-        console.log('sdfds')
           moveLeft();
       });
 
       $('a.control_next').click(function () {
-        console.log('sdfds')
           moveRight();
       });
 
@@ -71,7 +79,7 @@
       		<div class="gotolink"><h4><a href="https://apply.jobadder.com/au2/3572/540076/hcyzsmje4fgutajs56ahrranje">Go to link >></a></h4></div>
       	</div>
         <div class="bookmark-box">
-      		<div class="bookmark-title"><h3>Automation Test Analyst</h3></div>
+      		<div class="bookmark-title"><h3>Automation Tester</h3></div>
       		<div class="description">
       			<p>The position reports to the Testing Manager. The successful candidate will be responsible for the automated testing of the back-end systems, website</p>
       		</div>
@@ -87,21 +95,50 @@
       </li>
       <li>
         <div class="bookmark-box">
-          <div class="bookmark-title"><h3>Front End Developer</h3></div>
+          <div class="bookmark-title"><h3>Sitcore Developer</h3></div>
+          <div class="description">
+            <p>work on fast paced, complex and interesting projects that will challenge and develop your Javascript skills.</p>
+          </div>
+          <div class="gotolink"><h4><a href="https://apply.jobadder.com/au2/3572/540070/hcyzsmje4fgutajs56ahrranje">Go to link >></a></h4></div>
+        </div>
+        <div class="bookmark-box">
+      		<div class="bookmark-title"><h3>J2EE/Java Developer</h3></div>
+      		<div class="description">
+      			<p>The position reports to the Testing Manager. The successful candidate will be responsible for the automated testing of the back-end systems, website</p>
+      		</div>
+      		<div class="gotolink"><h4><a href="https://apply.jobadder.com/au2/3572/540075/hcyzsmje4fgutajs56ahrranje">Go to link >></a></h4></div>
+      	</div>
+        <div class="bookmark-box">
+      		<div class="bookmark-title"><h3>Php Developer</h3></div>
+      		<div class="description">
+      			<p>The position reports to the Testing Manager. The successful candidate will be responsible for the automated testing of the back-end systems, website</p>
+      		</div>
+      		<div class="gotolink"><h4><a href="https://apply.jobadder.com/au2/3572/540075/hcyzsmje4fgutajs56ahrranje">Go to link >></a></h4></div>
+      	</div>
+      </li>
+      <li>
+        <div class="bookmark-box">
+      		<div class="bookmark-title"><h3>Project Manager</h3></div>
+      		<div class="description">
+      			<p>The position reports to the Testing Manager. The successful candidate will be responsible for the automated testing of the back-end systems, website</p>
+      		</div>
+      		<div class="gotolink"><h4><a href="https://apply.jobadder.com/au2/3572/540075/hcyzsmje4fgutajs56ahrranje">Go to link >></a></h4></div>
+      	</div>
+        <div class="bookmark-box">
+          <div class="bookmark-title"><h3>Jr Front End Developer</h3></div>
           <div class="description">
             <p>work on fast paced, complex and interesting projects that will challenge and develop your Javascript skills.</p>
           </div>
           <div class="gotolink"><h4><a href="https://apply.jobadder.com/au2/3572/540070/hcyzsmje4fgutajs56ahrranje">Go to link >></a></h4></div>
         </div>
       </li>
-      <!-- <li>SLIDE 3</li>
-      <li>SLIDE 4</li> -->
     </ul>
   </div>
-
   <div class="slider_option">
-    <input type="checkbox" id="checkbox">
-    <label for="checkbox">Autoplay Slider</label>
+    <input type="checkbox" value="None" id="scroll" name="check" />
+    <label for="scroll">
+      <span>Stop Auto Scrolling</span>
+    </label>
   </div>
   <p class="disclaimer">
       Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto
@@ -115,11 +152,9 @@
         <input type="radio" id="button-1" name="controls" checked="checked"/>
         <input type="radio" id="button-2" name="controls"/>
         <input type="radio" id="button-3" name="controls"/>
-        <!-- <input type="radio" id="button-4" name="controls"/> -->
         <label for="button-1" class="arrows" id="arrow-1">></label>
         <label for="button-2" class="arrows" id="arrow-2">></label>
         <label for="button-3" class="arrows" id="arrow-3">></label>
-        <!-- <label for="button-4" class="arrows" id="arrow-4">></label> -->
         <div id="slideshow-inner">
             <ul>
                 <li id="slide1">
@@ -305,17 +340,9 @@
                       </div>
                   </div>
                 </li>
-                <!-- <li id="slide4">
-
-                </li> -->
             </ul>
         </div>
-    </div>
-
-
-
-
-
+      </div>
     </div>
 </section>
 
