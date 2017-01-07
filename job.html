@@ -1,3 +1,53 @@
+<script>
+  $(document).ready(function ($) {
+
+    $('#checkbox').change(function(){
+      setInterval(function () {
+          moveRight();
+      }, 3000);
+    });
+
+    var slideCount = $('#slider ul li').length;
+    var slideWidth = $('#slider ul li').width();
+    var slideHeight = $('#slider ul li').height();
+    var sliderUlWidth = slideCount * slideWidth;
+
+    $('#slider').css({ width: slideWidth, height: slideHeight });
+
+    $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+
+      $('#slider ul li:last-child').prependTo('#slider ul');
+
+      function moveLeft() {
+          $('#slider ul').animate({
+              left: + slideWidth
+          }, 200, function () {
+              $('#slider ul li:last-child').prependTo('#slider ul');
+              $('#slider ul').css('left', '');
+          });
+      };
+
+      function moveRight() {
+          $('#slider ul').animate({
+              left: - slideWidth
+          }, 200, function () {
+              $('#slider ul li:first-child').appendTo('#slider ul');
+              $('#slider ul').css('left', '');
+          });
+      };
+
+      $('a.control_prev').click(function () {
+        console.log('sdfds')
+          moveLeft();
+      });
+
+      $('a.control_next').click(function () {
+        console.log('sdfds')
+          moveRight();
+      });
+
+  });
+</script>
 <input id="tab1" type="radio" name="tabs" checked>
 <label for="tab1">Latest Openings</label>
 
@@ -8,38 +58,55 @@
 <label for="tab3">All Openings</label>
 
 <section id="content1">
-<div class="slider">
-<ul>
-  <li id="no-js-slider-1" class="slide">
-    <div class="box">
+  <div id="slider">
+    <a class="control_next">></a>
+    <a class="control_prev"><</a>
+    <ul>
+      <li>
+        <div class="bookmark-box">
+      		<div class="bookmark-title"><h3>UI Designer</h3></div>
+      		<div class="description">
+      			<p>Here's an opportunity for a Digital Designer with UI/UX skills to join an award-winning agency with a passion for producing great work</p>
+      		</div>
+      		<div class="gotolink"><h4><a href="https://apply.jobadder.com/au2/3572/540076/hcyzsmje4fgutajs56ahrranje">Go to link >></a></h4></div>
+      	</div>
+        <div class="bookmark-box">
+      		<div class="bookmark-title"><h3>Automation Test Analyst</h3></div>
+      		<div class="description">
+      			<p>The position reports to the Testing Manager. The successful candidate will be responsible for the automated testing of the back-end systems, website</p>
+      		</div>
+      		<div class="gotolink"><h4><a href="https://apply.jobadder.com/au2/3572/540075/hcyzsmje4fgutajs56ahrranje">Go to link >></a></h4></div>
+      	</div>
+        <div class="bookmark-box">
+      		<div class="bookmark-title"><h3>Senior Front End Developer</h3></div>
+      		<div class="description">
+      			<p>We are looking for someone who can help lead a team and can shape the front-end technology of our system.</p>
+      		</div>
+      		<div class="gotolink"><h4><a href="https://apply.jobadder.com/au2/3572/540072/hcyzsmje4fgutajs56ahrranje">Go to link >></a></h4></div>
+      	</div>
+      </li>
+      <li>
+        <div class="bookmark-box">
+          <div class="bookmark-title"><h3>Front End Developer</h3></div>
+          <div class="description">
+            <p>work on fast paced, complex and interesting projects that will challenge and develop your Javascript skills.</p>
+          </div>
+          <div class="gotolink"><h4><a href="https://apply.jobadder.com/au2/3572/540070/hcyzsmje4fgutajs56ahrranje">Go to link >></a></h4></div>
+        </div>
+      </li>
+      <!-- <li>SLIDE 3</li>
+      <li>SLIDE 4</li> -->
+    </ul>
+  </div>
 
-    </div>
-    <a class="prev" href="#no-js-slider-10">prev</a>
-    <a class="next" href="#no-js-slider-2">next</a>
-  </li>
-  <li id="no-js-slider-2" class="slide">
-    <div class="box">
-
-    </div>
-    <a class="prev" href="#no-js-slider-1">prev</a>
-    <a class="next" href="#no-js-slider-3">next</a>
-  </li>
-  <li id="no-js-slider-3" class="slide">
-    <div class="box">
-
-    </div>
-    <a class="prev" href="#no-js-slider-2">prev</a>
-    <a class="next" href="#no-js-slider-4">next</a>
-  </li>
-  <li id="no-js-slider-4" class="slide">
-    <div class="box">
-
-    </div>
-    <a class="prev" href="#no-js-slider-3">prev</a>
-    <a class="next" href="#no-js-slider-5">next</a>
-  </li>
-</ul>
-</div>
+  <div class="slider_option">
+    <input type="checkbox" id="checkbox">
+    <label for="checkbox">Autoplay Slider</label>
+  </div>
+  <p class="disclaimer">
+      Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto
+      pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
+  </p>
 </section>
 
 <section id="content2">
@@ -48,14 +115,41 @@
         <input type="radio" id="button-1" name="controls" checked="checked"/>
         <input type="radio" id="button-2" name="controls"/>
         <input type="radio" id="button-3" name="controls"/>
-        <input type="radio" id="button-4" name="controls"/>
+        <!-- <input type="radio" id="button-4" name="controls"/> -->
         <label for="button-1" class="arrows" id="arrow-1">></label>
         <label for="button-2" class="arrows" id="arrow-2">></label>
         <label for="button-3" class="arrows" id="arrow-3">></label>
-        <label for="button-4" class="arrows" id="arrow-4">></label>
+        <!-- <label for="button-4" class="arrows" id="arrow-4">></label> -->
         <div id="slideshow-inner">
             <ul>
                 <li id="slide1">
+                  <div class="kart">
+                      <div class="location">Sydney</div>
+                      <div class="avatar man"></div>
+                      <div class="content">
+                          <h3>.Net Developer</h3>
+                          <p>
+                              Skills:
+                          </p>
+                          <ul>
+                              <li>
+                                Experience with ASP.NET, Web API, and C#
+                              </li>
+                              <li>
+                                WCF Web Services, REST Services, JSON and Azure Technology stack
+                              </li>
+                              <li>
+                                  Knowledge of HTML, CSS and JavaScript
+                              </li>
+                              <li>
+                                Strong experience in designing and n-tier architectures (UI, Business Logic Layer, Data Access Layer)
+                              </li>
+                              <li>
+                                Strong ability in designing an optimial SQL Server stored procedures
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
                   <div class="kart">
                       <div class="location">Sydney</div>
                       <div class="avatar man"></div>
@@ -74,15 +168,12 @@
                               <li>
                                   Also Experience with Amazon Web Services (AWS), Google Analytics and Google, Bing, Facebook Ad generation
                               </li>
-                              <li>
-                                  Strong written and verbal communication skills
-                              </li>
                           </ul>
                       </div>
                   </div>
                   <div class="kart">
                       <div class="location">Brisbane</div>
-                      <div class="avatar women1"></div>
+                      <div class="avatar women"></div>
                       <div class="content">
                           <h3>Automation Tester</h3>
                           <p>
@@ -106,6 +197,33 @@
                   </div>
                 </li>
                 <li id="slide2">
+                  <div class="kart">
+                      <div class="location">Brisbane</div>
+                      <div class="avatar women"></div>
+                      <div class="content">
+                          <h3>UI Designer</h3>
+                          <p>
+                              Skills:
+                          </p>
+                          <ul>
+                              <li>
+                                  Solid experience in interaction, visual and user interface design.
+                              </li>
+                              <li>
+                                Deep understanding in best design practices for mobile and desktop.
+                              </li>
+                              <li>
+                                Strong attention to detail, problem solving and organisational skills.
+                              </li>
+                              <li>
+                                  Demonstrable skills in iconography, typography, layout and digital UI design
+                              </li>
+                              <li>
+                                Working knowledge of design tools, such as Sketch, Photoshop, Illustrator, InDesign
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
                   <div class="kart">
                       <div class="location">Sydney</div>
                       <div class="avatar man1"></div>
@@ -135,7 +253,7 @@
                   </div>
                   <div class="kart">
                       <div class="location">Melbourne</div>
-                      <div class="avatar women"></div>
+                      <div class="avatar women1"></div>
                       <div class="content">
                           <h3>Tech Lead / Scrum Master</h3>
                           <p>
@@ -186,66 +304,10 @@
                           </ul>
                       </div>
                   </div>
-                  <div class="kart">
-                      <div class="location">Brisbane</div>
-                      <div class="avatar women"></div>
-                      <div class="content">
-                          <h3>UI Designer</h3>
-                          <p>
-                              Skills:
-                          </p>
-                          <ul>
-                              <li>
-                                  Solid experience in interaction, visual and user interface design.
-                              </li>
-                              <li>
-                                Deep understanding in best design practices for mobile and desktop.
-                              </li>
-                              <li>
-                                Strong attention to detail, problem solving and organisational skills.
-                              </li>
-                              <li>
-                                  Demonstrable skills in iconography, typography, layout and digital UI design
-                              </li>
-                              <li>
-                                Working knowledge of design tools, such as Sketch, Photoshop, Illustrator, InDesign
-                              </li>
-                          </ul>
-                      </div>
-                  </div>
                 </li>
-                <li id="slide4">
-                  <div class="kart">
-                      <div class="location">Sydney</div>
-                      <div class="avatar man"></div>
-                      <div class="content">
-                          <h3>.Net Developer</h3>
-                          <p>
-                              Skills:
-                          </p>
-                          <ul>
-                              <li>
-                                Experience with ASP.NET, Web API, and C#
-                              </li>
-                              <li>
-                                WCF Web Services, REST Services, JSON and Azure Technology stack
-                              </li>
-                              <li>
-                                  Knowledge of HTML, CSS and JavaScript
-                              </li>
-                              <li>
-                                Strong experience in designing and n-tier architectures (UI, Business Logic Layer, Data Access Layer)
-                              </li>
-                              <li>
-                                Strong ability in designing an optimial SQL Server stored procedures
-                              </li>
-                              <li>
-                                  Deep knowledge of the .NET 3.5+ Framework, including Visual Studio, C#
-                              </li>
-                          </ul>
-                      </div>
-                  </div>
-                </li>
+                <!-- <li id="slide4">
+
+                </li> -->
             </ul>
         </div>
     </div>
