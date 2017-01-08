@@ -98,6 +98,7 @@ Job Styles
 
 #jobs p.disclaimer {
   font-size: 85%;
+  visibility: hidden;
 }
 
 #jobs .ja-job-list {
