@@ -285,6 +285,7 @@ Top Employee Card Styles
 .kart .content p {
     margin: 0 .5em 0;
     padding: 0;
+    color: #725e5b;
 }
 
 .kart .content ul li {
@@ -530,7 +531,9 @@ Slider Styles
 #slideshow-wrap input[type=radio]#button-5:checked~.arrows#arrow-4 {
     left: 0
 }
-
+#slideshow-wrap input[type=radio]#button-2:checked~.arrows#arrow-1:before{
+  display: none;
+}
 /*
 Slider Two
 */
@@ -623,6 +626,10 @@ Slider Two
 #slider a.control_next {
     right: 0;
     border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  display: none;
 }
 
 .slider_option {
